@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{ i_apod[0]["title"] }}</title>
+</head>
+<body>
+	<img src="{{ i_apod[0]["url"] }}" alt="{{ i_apod[0]["explanation"] }}">
+	<hr>
+	<div>
+		{% if i_apod[0]["copyright"] %}
+		<b>copyright : </b>{{ i_apod[0]["copyright"] }} <br> <br>
+		{% endif %}
+		<b>date : </b>{{ i_apod[0]["date"] }} <br> <br>
+		<b>explanation : </b>{{ i_apod[0]["explanation"] }} <br> <br>
+		{% if i_apod[0]["hdurl"] %}
+		<b>hdurl : </b><a href="{{ i_apod[0]["hdurl"] }}">{{ i_apod[0]["hdurl"] }}</a> <br> <br>
+		{% endif %}
+		<b>mediatype : </b>{{ i_apod[0]["media_type"] }} <br> <br>
+		<b>service_version : </b>{{ i_apod[0]["service_version"] }} <br> <br>
+		<b>title : </b>{{ i_apod[0]["title"] }} <br> <br>
+		{% if i_apod[0]["url"] %}
+		<b>url : </b><a href="{{ i_apod[0]["url"] }}">{{ i_apod[0]["url"] }}</a> <br> <br>
+		{% endif %}
+	</div>
+</body>
+</html>
